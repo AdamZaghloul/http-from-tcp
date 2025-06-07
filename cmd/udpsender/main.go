@@ -22,6 +22,8 @@ func main() {
 		os.Exit(1)
 	}
 
+	defer conn.Close()
+
 	reader := bufio.NewReader(os.Stdin)
 
 	for {
